@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  height: 610px;
+  width: 610px;
+  margin: 10px auto 0 auto;
+  position: relative;
+}
+.content .playB {
+  background-color: #72f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 120px;
+  height: 40px;
+  margin-left: -60px;
+  margin-top: -20px;
+}
+.content .pauseB {
+  background-color: #72f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 60px;
+  height: 30px;
+  margin-left: -30px;
+  margin-top: -15px;
+  display: none;
+}
+.content .wrap {
+  width: 600px;
+  height: 600px;
+  background-color: #94fd9a;
+  border: 5px solid #0d5a03;
+  position: relative;
+}
+.content .wrap .snakeH {
+  background-color: #550808;
+  border-radius: 0 10px 10px 0;
+}
+.content .wrap .snakeB {
+  background-color: #f4ff5f;
+  border-radius: 7px;
+}
+.content .wrap .snakeF {
+  background-color: #ff0000;
+}
+.content .control {
+  user-select: none;
+}
+.content .control span {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.content .control .score {
+  width: 275px;
+  vertical-align: top;
+  font-size: 16px;
+  cursor: none;
+}
+.content .control .topbt {
+  background: url('top.jpg') no-repeat 0 0;
+  background-size: 60px 60px;
+}
+.content .control .leftbt {
+  background: url('left.jpg') no-repeat 0 0;
+  background-size: 60px 60px;
+  margin-left: 215px;
+}
+.content .control .rightbt {
+  background: url('right.jpg') no-repeat 0 0;
+  background-size: 60px 60px;
+}
+.content .control .bottombt {
+  background: url('bottom.jpg') no-repeat 0 0;
+  background-size: 60px 60px;
+}

@@ -1,0 +1,91 @@
+@600:600px;
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn(){
+    background-color: rgb(114, 240, 240);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+}
+
+.content{
+    height: @600 + 10;
+    width: @600 + 10;
+    margin: 10px auto 0 auto;
+    position: relative;
+
+    .playB{
+        .btn();
+        width: 120px;
+        height: 40px;
+        margin-left: -60px;
+        margin-top: -20px;
+        }
+    .pauseB{
+        .btn();
+        width: 60px;
+        height: 30px;
+        margin-left: -30px;
+        margin-top: -15px;
+        display: none;
+        }
+    .wrap{
+        width: @600;
+        height: @600;
+        background-color: rgb(148, 253, 154);
+        border: 5px solid rgb(13, 90, 3);
+        position: relative;
+        // overflow: hidden;
+
+        .snakeH{
+            background-color: rgb(85, 8, 8);
+            border-radius: 0 10px 10px 0;
+        }
+        .snakeB{
+            background-color: rgb(244, 255, 95);
+            border-radius: 7px;
+        }
+        .snakeF{
+            background-color: rgb(255, 0, 0);
+        }
+    }
+    .control{
+        user-select: none;
+        span{
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .score{
+            width: 275px;
+            vertical-align: top;
+            font-size: 16px;
+            cursor:none;
+        }
+        .topbt{
+            background: url('top.jpg') no-repeat 0 0;
+            background-size: 60px 60px;
+        }
+        .leftbt{
+            background: url('left.jpg') no-repeat 0 0;
+            background-size: 60px 60px;
+            margin-left: 215px;
+        }
+        .rightbt{
+            background: url('right.jpg') no-repeat 0 0;
+            background-size: 60px 60px;
+        }
+        .bottombt{
+            background: url('bottom.jpg') no-repeat 0 0;
+            background-size: 60px 60px;
+        }
+    }
+}
