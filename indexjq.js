@@ -13,20 +13,19 @@ $(function () {
         this.class = classname;
         this.viewContent = document.createElement('div');
         this.viewContent.className = this.class;
-        this.parent = document.getElementsByClassName('wrap')[0];
     }
 
     Square.prototype.create = function () {
-        this.viewContent.style.position = 'absolute';
-        this.viewContent.style.width = sw + 'px';
-        this.viewContent.style.height = sh + 'px';
-        this.viewContent.style.left = this.x + 'px';
-        this.viewContent.style.top = this.y + 'px';
-        this.parent.appendChild(this.viewContent);
+        $(this.viewContent).css('position', 'absolute');
+        $(this.viewContent).css('width', sw + 'px');
+        $(this.viewContent).css('height', sh + 'px');
+        $(this.viewContent).css('left', this.x + 'px');
+        $(this.viewContent).css('top', this.y + 'px');
+        $('.wrap').append(this.viewContent);
     }
 
     Square.prototype.remove = function () {
-        this.parent.removeChild(this.viewContent);
+        $(this.viewContent).remove();
     }
 
     function Snake() {
@@ -170,7 +169,7 @@ $(function () {
     Game.prototype.init = function () {
         snake.init();
         createFood();
-        
+
         document.onkeydown = function (e) {
             if (e.which == 37 && snake.direction != snake.directionlist.right) {
                 snake.direction = snake.directionlist.left;
@@ -182,25 +181,25 @@ $(function () {
                 snake.direction = snake.directionlist.down;
             }
         };
-        $('.topbt').on('click',function(){
+        $('.topbt').on('click', function () {
             console.log('t');
             if (snake.direction != snake.directionlist.down) {
                 snake.direction = snake.directionlist.up;
             }
         });
-        $('.leftbt').on('click',function(){
+        $('.leftbt').on('click', function () {
             console.log('l');
             if (snake.direction != snake.directionlist.right) {
                 snake.direction = snake.directionlist.left;
             }
         });
-        $('.rightbt').on('click',function(){
+        $('.rightbt').on('click', function () {
             console.log('r');
             if (snake.direction != snake.directionlist.left) {
                 snake.direction = snake.directionlist.right;
             }
         });
-        $('.bottombt').on('click',function(){
+        $('.bottombt').on('click', function () {
             console.log('b');
             if (snake.direction != snake.directionlist.up) {
                 snake.direction = snake.directionlist.down;
@@ -243,5 +242,5 @@ $(function () {
         $('.pauseB').css('display', 'none');
         game.start();
     })
-    
+
 })
