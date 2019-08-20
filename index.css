@@ -88,3 +88,17 @@
   background: url('bottom.jpg') no-repeat 0 0;
   background-size: 60px 60px;
 }
+@media all and (max-width: 600px) {
+  .content {
+    width: 100%;
+  }
+  .content .wrap {
+    width: 100%;
+  }
+  .control .score {
+    width: 170px;
+  }
+  .control .leftbt {
+    margin-left: 110px;
+  }
+}
