@@ -41,7 +41,6 @@
         background-color: rgb(148, 253, 154);
         border: 5px solid rgb(13, 90, 3);
         position: relative;
-        // overflow: hidden;
 
         .snakeH{
             background-color: rgb(85, 8, 8);
@@ -86,6 +85,22 @@
         .bottombt{
             background: url('bottom.jpg') no-repeat 0 0;
             background-size: 60px 60px;
+        }
+    }
+}
+@media all and(max-width:600px){
+    .content{
+        width: 100%;
+        .wrap{
+            width: 100%;
+        }
+    }
+    .control{
+        .score{
+            width: 170px;
+        }
+        .leftbt{
+            margin-left: 110px;
         }
     }
 }
